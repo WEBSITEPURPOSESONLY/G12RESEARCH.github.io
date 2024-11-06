@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edutainment Quiz Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Main Menu -->
+    <div id="menu" class="menu">
+        <h1>Welcome to the Edutainment Game</h1>
+        <button onclick="showOptions()">Start Quiz</button>
+        <button onclick="showOptions()">Options</button>
+        <button onclick="showCustomQuizForm()">Create Custom Quiz</button>
+    </div>
+
+    <!-- Options Screen (hidden initially) -->
+    <div id="options" class="options" style="display:none;">
+        <h2>Choose a Subject</h2>
+        <select id="subject">
+            <option value="math">Math</option>
+            <option value="science">Science</option>
+            <option value="history">History</option>
+            <option id="customQuizOption" value="custom">Custom Quiz</option> <!-- Placeholder for custom quiz -->
+        </select>
+        <br><br>
+        <button onclick="hideOptions()">Back to Menu</button>
+        <button onclick="startQuiz()">Start Quiz</button>
+        <button onclick="showCustomQuizForm()">Create Custom Quiz</button>
+    </div>
+
+    <!-- Quiz Screen (hidden initially) -->
+    <div id="quiz" class="quiz-container" style="display:none;">
+        <h1>Quiz: <span id="subjectName"></span></h1>
+        <p id="question"></p>
+        <div id="choices">
+            <button onclick="checkAnswer('A')">Choice A</button>
+            <button onclick="checkAnswer('B')">Choice B</button>
+            <button onclick="checkAnswer('C')">Choice C</button>
+            <button onclick="checkAnswer('D')">Choice D</button>
+        </div>
+        <p id="feedback"></p>
+        <p>Score: <span id="score">0</span></p>
+        <button id="nextButton" onclick="nextQuestion()">Next Question</button>
+        <button id="homeButton" style="display:none;" onclick="goHome()">Home</button>
+    </div>
+    
+    <!-- Custom Quiz Form (hidden initially) -->
+    <div id="customQuizForm" class="custom-quiz-form" style="display:none;">
+        <h2>Create Your Own Quiz</h2>
+    
+        <!-- Input for Quiz Title -->
+        <label for="quizTitle">Quiz Title:</label>
+        <input type="text" id="quizTitle" placeholder="Enter quiz title" style="width: 100%; padding: 10px; margin-bottom: 10px;">
+        
+        <div id="questionContainer">
+            <!-- New question fields will be dynamically added here -->
+        </div>
+    
+        <button onclick="addQuestion()">Add Question</button>
+        <br><br>
+        <button onclick="saveCustomQuiz()">Save Quiz</button>
+        <button onclick="hideCustomQuizForm()">Cancel</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

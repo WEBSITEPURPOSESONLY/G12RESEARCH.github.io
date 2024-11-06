@@ -1,0 +1,80 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+/* Initially hide the quiz and options screens */
+#quiz, #options {
+    display: none;
+}
+
+#menu {
+    display: block;  /* Menu screen is shown by default */
+}
+#options {
+    margin-top: 20px;
+}
+
+#quiz {
+    margin-top: 30px;
+}
+#homeButton {
+    display: block; /* Make sure it's a block element */
+    margin: 0 auto; /* Center horizontally */
+    padding: 10px 20px; /* Add some padding */
+    font-size: 16px; /* Set the font size */
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Add pointer cursor */
+    position: absolute; /* Position it absolutely within the parent container */
+    top: 45%; /* Vertically center it */
+    left: 50%; /* Horizontally center it */
+    transform: translate(-50%, -50%); /* Adjust positioning to truly center it */
+}
+
+#homeButton:hover {
+    background-color: #45a049; /* Darker green when hovered */
+}
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+input[type="text"] {
+    padding: 10px;
+    margin: 10px;
+    width: 60%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+h2, h3 {
+    font-size: 24px;
+    color: #333;
+}
+.custom-quiz-form {
+    display: block; /* Make sure it's not hidden by any other CSS */
+    width: 80%; 
+    margin: auto; /* Centers the form on the page */
+    padding: 20px;
+    background-color: #f7f7f7; 
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
